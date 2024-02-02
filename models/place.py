@@ -28,7 +28,7 @@ class Place(BaseModel, Base):
     """ A place to stay """
     __tablename__ = 'places'
     if storage_type == 'db':
-        user = relationship("User", backref='places')
+        
         city_id = Column(String(60), ForeignKey('cities.id'), nullable=False)
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
         name = Column(String(128), nullable=False)
@@ -43,6 +43,8 @@ class Place(BaseModel, Base):
                                cascade='all, delete, delete-orphan')
         amenities = relationship('Amenity', secondary=place_amenity,
                                  viewonly=False, backref='place_amenities')
+        user = relationship("User", backref='places')
+        
     else:
         city_id = ""
         user_id = ""
