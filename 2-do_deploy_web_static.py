@@ -4,7 +4,7 @@ from datetime import datetime
 from os import path
 from fabric.context_managers import cd
 
-env.hosts = ['52.87.216.6', '54.175.46.5']
+env.hosts = ['54.237.209.240', '54.198.28.227']
 env.user = 'ubuntu'
 env.key_filename = '/root/.ssh/school'
 
