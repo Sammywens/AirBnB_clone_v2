@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from fabric.api import run, env, put
+from fabric.api import run, env, put, cd
 from os import path
 
 env.hosts = ['54.237.209.240', '54.198.28.227']
